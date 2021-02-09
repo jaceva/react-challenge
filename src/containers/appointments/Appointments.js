@@ -1,12 +1,12 @@
 import React from 'react';
-import { ApptCard } from '../../components/apptCard/ApptCard';
-import { ApptPicker } from '../../components/apptPicker/ApptPicker';
-import { ApptsSubmitter } from '../../components/apptsSubmitter/ApptsSubmitter';
+import { AppointmentCard } from '../../components/appointmentCard/AppointmentCard';
+import { AppointmentPicker } from '../../components/appointmentPicker/AppointmentPicker';
+import { AppointmentsSubmitter } from '../../components/appointmentsSubmitter/AppointmentsSubmitter';
 
 export const Appointments = ({userType}) => {
-  let picker = <ApptPicker />
-  if (userType == 'Provider'){
-    picker = <ApptsSubmitter />
+  let picker = <AppointmentPicker />
+  if (userType === 'Provider'){
+    picker = <AppointmentsSubmitter />
   } 
   
   return (
@@ -18,7 +18,7 @@ export const Appointments = ({userType}) => {
       <p>Providers create appointment ranges by picking a start date and time and an end date and time. Appointments made with the current provider are listed with patient name, date and time.</p>
       {picker}
       <h2>Appointment List</h2>
-      <ApptCard />
+      <AppointmentCard />
     </div>
   )
 }

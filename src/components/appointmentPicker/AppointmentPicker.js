@@ -3,7 +3,7 @@ import { ProviderPicker } from '../providerPicker/ProviderPicker';
 import { DatePicker } from '../datePicker/DatePicker';
 import { TimePicker } from '../timePicker/TimePicker';
 
-export const ApptPicker = () => {
+export const AppointmentPicker = () => {
   return (
     <div style={{border: "1px solid black"}}>
       <h3>Patient Appontment Picker Component</h3>
