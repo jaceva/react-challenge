@@ -12,7 +12,6 @@ export const Login = ({
   const [password, setPassword] = useState("");
 
   const submitCredentials = () => {
-    console.log('submit');
     if(checkCredentials(username, password)){
       setUser(getUser(username));
       setLoggedIn(true);

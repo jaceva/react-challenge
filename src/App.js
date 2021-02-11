@@ -7,7 +7,7 @@ import { NewPatient } from './containers/newPatient/NewPatient';
 import { Provider } from './containers/provider/Provider';
 import { Patient } from './containers/patient/Patient';
 import { Navbar } from './components/navbar/Navbar';
-import { getProviders, addPatient, getPatients } from './data';
+import { getProviders, addPatient } from './data';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -24,15 +24,18 @@ function App() {
     }
   },[loggedIn, history, user]);
   
+  // logs out of patient or provider page
   const logOut = () => {
     setLoggedIn(false);
     setNavName('Appointments App');
     history.push('/login')
   }
 
+  // handler for new patient button click
   const newPatient = () =>
     history.push('/newpatient');
 
+  // handler for new patient form
   const addNewPatient = (firstname, lastname, username, password) => {
     addPatient(firstname, lastname, username, password);
     history.push('/login');
@@ -48,21 +51,32 @@ function App() {
       <br/>
       <Switch>
         <Route exact path="/"><Redirect to="/login" /></Route>
-        <Route path="/login"><Login 
-          setLoggedIn={setLoggedIn}
-          setUser={setUser}
-          newPatient={newPatient}
-        /></Route>
-        <Route path="/newpatient"><NewPatient 
-          addPatient={addNewPatient}
-        /></Route>
+        <Route path="/login">
+          <Login 
+            setLoggedIn={setLoggedIn}
+            setUser={setUser}
+            newPatient={newPatient}
+          />
+        </Route>
+        <Route path="/newpatient">
+          <NewPatient 
+            addPatient={addNewPatient}
+          />
+        </Route>
+
+        <Route path="/provider">
+          <Protected loggedIn={loggedIn}>
+            <Provider provider={user}/>
+          </Protected>
+        </Route>
         
-        <Route path="/provider"><Provider provider={user}/></Route>
+        <Route path="/patient">
+          <Protected loggedIn={loggedIn}>
+            <Patient patient={user} providers={providers}/>
+          </Protected>
+        </Route>
         
-        
-        
-        <Route path="/patient"><Patient patient={user} providers={providers}/></Route>
-        
+
       </Switch>
     </div>
   );

@@ -17,31 +17,33 @@ export const NewUserForm = ({
       <input 
         type="text" 
         id="firstname"
-        onChange={e => setFirstname(e.target.value)}></input><br/>
+        onChange={e => setFirstname(e.target.value)}>
+      </input><br/>
 
-      
       <label>Last Name</label><br/>
       <input 
         type="text" 
         id="lastname"
-        onChange={e => setLastname(e.target.value)}></input><br/>
+        onChange={e => setLastname(e.target.value)}>
+      </input><br/>
       <br/>
 
-      
       <label>Username</label><br/>
       <input 
         type="text" 
         id="username"
-        onChange={e => setUsername(e.target.value)}></input><br/>
+        onChange={e => setUsername(e.target.value)}>
+      </input><br/>
       Username At Least 8 Characters: {usernameCheck}<br/>
       <br/>
+
       <label>Password</label><br/>
       <input 
         type="password" 
         id="password" 
         placeholder="Password" 
-        onChange={e => setPassword(e.target.value)}
-      ></input><br/>
+        onChange={e => setPassword(e.target.value)}>
+      </input><br/>
       <input 
         type="password" 
         id="confirm" 
