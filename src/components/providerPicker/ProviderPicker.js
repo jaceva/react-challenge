@@ -1,9 +1,16 @@
 import React from 'react';
 
-export const ProviderPicker = () => {
+export const ProviderPicker = ({providers, setProvider}) => {
+  let count = 0;
   return (
-    <div style={{border: "1px solid black"}}>
-      <h5>-- Provider Picker Component</h5>
+    <div>
+      <label>Choose a Provider</label><br/>
+      <select name="providers" id="providers" onChange={e => setProvider(e.target.value)}>
+        {providers.map(provider => {
+          count += 1;
+          return <option value={provider.username} key={count}>{provider.name}</option>
+        })}
+      </select>
     </div>
   )
 }

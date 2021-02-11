@@ -1,18 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-export const Navbar = () => {
+export const Navbar = ({name, loggedIn, logout}) => {
   return (
-    <div style={{border: "1px solid black"}}>
-      <h3>Navigation Bar Component</h3>
-      <span>Route Links  </span>
-      <Link to="/">/</Link>
-      <span>  ---  </span>
-      <Link to="login">/login</Link>
-      <span>  ---  </span>
-      <Link to="patient">/patients</Link>
-      <span>  ---  </span>
-      <Link to="provider">/provider</Link>
+    <div>
+      {name}
+      <button disabled={!loggedIn} onClick={logout}>Log Out</button>
     </div>
   )
 }

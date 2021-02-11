@@ -1,9 +1,16 @@
 import React from 'react';
 
-export const TimePicker = () => {
+export const TimePicker = ({times, setTime}) => {
+  let count = 0;
   return (
-    <div style={{border: "1px solid black"}}>
-      <h5>-- Time Picker Component</h5>
-    </div>
+    <>
+      <label>Choose an Available Time</label><br/>
+      <select name="times" id="times" onChange={e => setTime(e.target.value)}>
+      {times.map(time => {
+      count += 1;
+      return <option value={time} key={count}>{time}</option>
+      })}
+      </select>
+    </>
   )
 }
