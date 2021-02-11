@@ -26,6 +26,11 @@ export const AppointmentPicker = ({addAppointment, providers}) => {
     setSelectedProvider(value);
     setTimes();
   }
+  
+  const setDateHandler = value => {
+    setSelectedDate(value);
+    setTimes();
+  }
 
   const addAppointmentHandler = () => {
     addAppointment(selectedProvider, selectedDate, selectedTime)
@@ -42,7 +47,7 @@ export const AppointmentPicker = ({addAppointment, providers}) => {
       Select The Date<br/>
       <DatePicker 
         selected={selectedDate}
-        onChange={date => setSelectedDate(date)}
+        onChange={date =>  setDateHandler(date)}
       /><br/>
       <br/>
       <TimePicker 
