@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TimePicker = () => {
+export const ContactPicker = () => {
   return (
     <div>
       
