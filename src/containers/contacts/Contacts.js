@@ -1,9 +1,16 @@
 import React from 'react';
 
+import { ContactForm } from '../../components/contactForm/ContactForm';
+import { TileList } from '../../components/tileList/TileList';
+
+
 export const Contacts = () => {
   return (
     <div>
-      Contact List and Contact Form side by side    
+      <ContactForm 
+        handleSubmit={() => {}}  
+      />
+      <TileList />
     </div>
   )
 }

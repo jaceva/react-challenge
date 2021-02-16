@@ -1,15 +1,15 @@
 import React from 'react';
+
 import { ContactPicker } from '../contactPicker/ContactPicker';
-import { DatePicker } from '../datePicker/DatePicker';
 import { TimePicker } from '../timePicker/TimePicker';
 
-export const AppointmentMaker = () => {
+export const AppointmentForm = ({handleSubmit}) => {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <ContactPicker />
-      <DatePicker />
+      
       <TimePicker />
-      <button>Submit Appointment</button>
+      <input type="submit" value="Add Appointment"/>
     </form>
   )
 }
