@@ -4,13 +4,17 @@ import { ContactForm } from '../../components/contactForm/ContactForm';
 import { TileList } from '../../components/tileList/TileList';
 
 
-export const Contacts = () => {
+export const Contacts = ({
+  contacts,
+  addContact
+}) => {
+  
   return (
     <div>
       <ContactForm 
-        handleSubmit={() => {}}  
+        addContact={addContact}  
       />
-      <TileList />
+      <TileList tiles={contacts}/>
     </div>
   )
 }
