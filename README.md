@@ -1,7 +1,5 @@
 ## Codecademy React Challenge Project
 
-I am adding this line.
-
 This project will ask the learner to design an appointment app that resembles those of medical offices like LabCorp and Quest Diagnostics. The app will allow users logged in as Providers to add appointment availability and users logged in as Patients" to reserve an available appointment. 
 
 Application Components:
