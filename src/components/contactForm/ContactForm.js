@@ -23,15 +23,15 @@ export const ContactForm = ({ addContact }) => {
     setEmailValid(emailRegex.test(email));
   }, [email]);
 
-  useEffect(() => {
-    setSubmitValid(name !== "" && phoneValid && emailValid);
-  }, [name, phoneValid, emailValid]);
+  // useEffect(() => {
+  //   setSubmitValid(name !== "" && phoneValid && emailValid);
+  // }, [name, phoneValid, emailValid]);
 
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Contact Name:
-        <input type="text" onChange={(e) => setName(e.target.value)} />
+        <input type="text" onChange={(e) => setName(e.target.value)} required />
       </label>
       <br />
       <label>

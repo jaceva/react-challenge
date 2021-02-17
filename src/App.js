@@ -33,12 +33,12 @@ function App() {
   return (
     <>
       <nav>
-        <Link to="/appointments">Appointments</Link>
         <Link to="/contacts">Contacts</Link>
+        <Link to="/appointments">Appointments</Link>
       </nav>
       <Switch>
         <Route exact path="/">
-          <Redirect to="/appointments" />
+          <Redirect to="/contacts" />
         </Route>
         <Route path="/contacts">
           <Contacts contacts={contacts} addContact={addContact} />
