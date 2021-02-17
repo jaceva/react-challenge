@@ -8,13 +8,14 @@ function App() {
   const [appointments, setAppointments] = useState([]);
   const [contacts, setContacts] = useState([]);
 
-  const addAppointment = (title, contact, date) => {
+  const addAppointment = (title, contact, date, time) => {
     setAppointments([
       ...appointments,
       {
         title: title,
         contact: contact,
-        date: date.toLocaleDateString("en-US"),
+        date: date,
+        time: time,
       },
     ]);
   };
