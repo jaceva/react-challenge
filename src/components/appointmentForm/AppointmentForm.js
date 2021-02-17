@@ -10,7 +10,6 @@ export const AppointmentForm = ({ contacts, addAppointment }) => {
   );
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [submitValid, setSubmitValid] = useState(false);
 
   const today = new Date();
   const month = (today.getMonth() + 1 < 10 ? "0" : "") + (today.getMonth() + 1);
@@ -28,10 +27,6 @@ export const AppointmentForm = ({ contacts, addAppointment }) => {
     }
     return contacts.map((contact) => contact.name);
   };
-
-  useEffect(() => {
-    setSubmitValid(contact !== "");
-  }, [contact]);
 
   return (
     <form onSubmit={handleSubmit}>
