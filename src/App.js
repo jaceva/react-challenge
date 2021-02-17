@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Switch, Route, Redirect, Link } from "react-router-dom";
 
-import { Appointments } from "./containers/appointments/Appointments";
-import { Contacts } from "./containers/contacts/Contacts";
+import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
+import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
   const [appointments, setAppointments] = useState([]);
@@ -42,10 +42,10 @@ function App() {
           <Redirect to="/contacts" />
         </Route>
         <Route path="/contacts">
-          <Contacts contacts={contacts} addContact={addContact} />
+          <ContactsPage contacts={contacts} addContact={addContact} />
         </Route>
         <Route path="/appointments">
-          <Appointments
+          <AppointmentsPage
             appointments={appointments}
             addAppointment={addAppointment}
             contacts={contacts}

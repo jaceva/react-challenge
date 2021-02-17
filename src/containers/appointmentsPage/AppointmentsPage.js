@@ -3,7 +3,7 @@ import React from "react";
 import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
 import { TileList } from "../../components/tileList/TileList";
 
-export const Appointments = ({ appointments, addAppointment, contacts }) => {
+export const AppointmentsPage = ({ appointments, addAppointment, contacts }) => {
   return (
     <>
       <h2>Add Appointment</h2>
