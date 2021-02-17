@@ -7,5 +7,5 @@ export const Tile = ({tile}) => {
         <p key={index}>{value}</p>
       )}
     </>
-  )
-}
+  );
+};

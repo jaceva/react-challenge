@@ -6,8 +6,8 @@ import { TileList } from '../../components/tileList/TileList';
 export const Appointments = ({
   appointments, 
   addAppointment,
-  contacts}) => {
-  
+  contacts
+}) => {
   return (
     <>
       <h2>Add Appointment</h2>
@@ -18,5 +18,5 @@ export const Appointments = ({
       <h2>Appointments</h2>
       <TileList tiles={appointments}/>
     </>
-  )
-}
+  );
+};

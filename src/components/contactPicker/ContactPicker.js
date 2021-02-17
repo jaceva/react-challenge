@@ -2,7 +2,6 @@ import React from 'react';
 
 export const ContactPicker = ({
   name,
-  selected,
   onChange,
   contacts}) => {
   return (
@@ -13,5 +12,5 @@ export const ContactPicker = ({
         })}
       </select>
     </>
-  )
-}
+  );
+};

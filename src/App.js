@@ -5,24 +5,32 @@ import { Appointments } from './containers/appointments/Appointments';
 import { Contacts } from './containers/contacts/Contacts';
 
 function App() {
-  console.log("hi")
   const [appointments, setAppointments] = useState([]);
   const [contacts, setContacts] = useState([]);
 
   const addAppointment = (title, contact, date) => {
-    setAppointments([...appointments, {title: title, contact: contact, date: date.toLocaleDateString('en-US')}])
-  }
+    setAppointments([
+      ...appointments, 
+      {
+        title: title, 
+        contact: contact, 
+        date: date.toLocaleDateString('en-US')
+      }
+    ]);
+  };
 
   const addContact = (name, phone, email) => {
-    setContacts([...contacts, {name: name, phone: phone, email: email}])
-  }
-
-  const getContactNames = () => contacts.map(
-    contact => contact.name
-  )
+    setContacts([
+      ...contacts, 
+      {
+        name: name, 
+        phone: phone, 
+        email: email}
+    ]);
+  };
 
   return (
-    <div>
+    <>
       <nav>
         <Link to="/appointments">Appointments</Link>
         <Link to="/contacts">Contacts</Link>
@@ -36,11 +44,11 @@ function App() {
         <Route path="/appointments"><Appointments 
           appointments={appointments} 
           addAppointment={addAppointment}
-          contacts={getContactNames()} 
+          contacts={contacts} 
         /></Route>
       </Switch>
-    </div>
+    </>
   );
-}
+};
 
 export default App;
