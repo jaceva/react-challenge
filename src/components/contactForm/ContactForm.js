@@ -28,27 +28,25 @@ export const ContactForm = ({ addContact }) => {
   }, [name, phoneValid, emailValid]);
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Contact Name:
-          <input type="text" onChange={(e) => setName(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Contact Phone (xxx-xxx-xxxx):
-          {phoneValid ? "True" : "False"}
-          <input type="text" onChange={(e) => setPhone(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Contact Email:
-          {emailValid ? "True" : "False"}
-          <input type="text" onChange={(e) => setEmail(e.target.value)} />
-        </label>
-        <br />
-        <input type="submit" disabled={!submitValid} value="Add Contact" />
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Contact Name:
+        <input type="text" onChange={(e) => setName(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Contact Phone (xxx-xxx-xxxx):
+        {phoneValid ? "True" : "False"}
+        <input type="text" onChange={(e) => setPhone(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        Contact Email:
+        {emailValid ? "True" : "False"}
+        <input type="text" onChange={(e) => setEmail(e.target.value)} />
+      </label>
+      <br />
+      <input type="submit" disabled={!submitValid} value="Add Contact" />
+    </form>
   );
 };

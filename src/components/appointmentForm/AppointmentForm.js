@@ -4,9 +4,10 @@ import { ContactPicker } from "../contactPicker/ContactPicker";
 import DatePicker from "react-datepicker";
 
 export const AppointmentForm = ({ contacts, addAppointment }) => {
-  const initContact = contacts.length > 0 ? contacts[0].name : "";
   const [title, setTitle] = useState("");
-  const [contact, setContact] = useState(initContact);
+  const [contact, setContact] = useState(
+    contacts.length > 0 ? contacts[0].name : ""
+  );
   const [date, setDate] = useState(new Date());
   const [submitValid, setSubmitValid] = useState(false);
 
@@ -27,38 +28,36 @@ export const AppointmentForm = ({ contacts, addAppointment }) => {
   }, [title, contact]);
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Appointment Title:
-          <input
-            type="text"
-            name="title"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Appointment With:
-          <ContactPicker
-            name="contact"
-            contacts={getContactNames()}
-            onChange={(e) => setContact(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Appointment Date:
-          <DatePicker
-            name="date"
-            selected={date}
-            onChange={(date) => setDate(date)}
-            minDate={new Date()}
-          />
-        </label>
-        <br />
-        <input type="submit" disabled={!submitValid} value="Add Appointment" />
-      </form>
-    </>
+    <form onSubmit={handleSubmit}>
+      <label>
+        Appointment Title:
+        <input
+          type="text"
+          name="title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Appointment With:
+        <ContactPicker
+          name="contact"
+          contacts={getContactNames()}
+          onChange={(e) => setContact(e.target.value)}
+        />
+      </label>
+      <br />
+      <label>
+        Appointment Date:
+        <DatePicker
+          name="date"
+          selected={date}
+          onChange={(date) => setDate(date)}
+          minDate={new Date()}
+        />
+      </label>
+      <br />
+      <input type="submit" disabled={!submitValid} value="Add Appointment" />
+    </form>
   );
 };
