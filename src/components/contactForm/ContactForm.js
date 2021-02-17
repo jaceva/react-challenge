@@ -24,8 +24,8 @@ export const ContactForm = ({addContact}) => {
     }, [email]);
 
     useEffect(() => {
-      setSubmitValid(phoneValid && emailValid);
-    },[phoneValid, emailValid]);
+      setSubmitValid(name !== '' && phoneValid && emailValid);
+    },[name, phoneValid, emailValid]);
 
     return (
     <>
