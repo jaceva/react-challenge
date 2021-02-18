@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-export const ContactForm = ({ addContact }) => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addContact(name, phone, email);
-  };
-
+export const ContactForm = ({ setName, setPhone, setEmail, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label>
         Contact Name:
-        <input type="text" onChange={(e) => setName(e.target.value)} required />
+        <input
+          type="text"
+          id="name"
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
       </label>
       <br />
       <label>
         Contact Phone (###-###-####):
-        {/* {phoneValid ? "True" : "False"} */}
         <input
           type="text"
+          id="phone"
           onChange={(e) => setPhone(e.target.value)}
           required
           pattern="[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"
@@ -30,9 +26,9 @@ export const ContactForm = ({ addContact }) => {
       <br />
       <label>
         Contact Email:
-        {/* {emailValid ? "True" : "False"} */}
         <input
           type="text"
+          id="email"
           onChange={(e) => setEmail(e.target.value)}
           required
           pattern="\S+[^.]@\S+\.\S+"

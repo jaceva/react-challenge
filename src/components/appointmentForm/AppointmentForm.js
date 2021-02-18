@@ -1,25 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { ContactPicker } from "../contactPicker/ContactPicker";
-import DatePicker from "react-datepicker";
 
-export const AppointmentForm = ({ contacts, addAppointment }) => {
-  const [title, setTitle] = useState("");
-  const [contact, setContact] = useState(
-    contacts.length > 0 ? contacts[0].name : ""
-  );
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-
+export const AppointmentForm = ({
+  contacts,
+  setTitle,
+  setContact,
+  setDate,
+  setTime,
+  handleSubmit,
+}) => {
   const today = new Date();
   const month = (today.getMonth() + 1 < 10 ? "0" : "") + (today.getMonth() + 1);
   const day = (today.getDate() < 10 ? "0" : "") + today.getDate();
   const todayString = `${today.getFullYear()}-${month}-${day}`;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    addAppointment(title, contact, date, time);
-  };
 
   const getContactNames = () => {
     if (contacts.length === 0) {

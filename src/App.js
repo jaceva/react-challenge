@@ -8,6 +8,11 @@ function App() {
   const [appointments, setAppointments] = useState([]);
   const [contacts, setContacts] = useState([]);
 
+  const ROUTES = {
+    CONTACTS: "/contacts",
+    APPOINTMENTS: "/appointments",
+  };
+
   const addAppointment = (title, contact, date, time) => {
     setAppointments([
       ...appointments,
@@ -34,17 +39,17 @@ function App() {
   return (
     <>
       <nav>
-        <Link to="/contacts">Contacts</Link>
-        <Link to="/appointments">Appointments</Link>
+        <Link to={ROUTES.CONTACTS}>Contacts</Link>
+        <Link to={ROUTES.APPOINTMENTS}>Appointments</Link>
       </nav>
       <Switch>
         <Route exact path="/">
-          <Redirect to="/contacts" />
+          <Redirect to={ROUTES.CONTACTS} />
         </Route>
-        <Route path="/contacts">
+        <Route path={ROUTES.CONTACTS}>
           <ContactsPage contacts={contacts} addContact={addContact} />
         </Route>
-        <Route path="/appointments">
+        <Route path={ROUTES.APPOINTMENTS}>
           <AppointmentsPage
             appointments={appointments}
             addAppointment={addAppointment}
