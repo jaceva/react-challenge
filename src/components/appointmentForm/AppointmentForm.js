@@ -14,10 +14,13 @@ export const AppointmentForm = ({
   setTime,
   handleSubmit
 }) => {
-  const today = new Date();
-  const month = (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
-  const day = (today.getDate() < 10 ? '0' : '') + today.getDate();
-  const todayString = `${today.getFullYear()}-${month}-${day}`;
+
+  const getTodayString = () => {
+    const today = new Date();
+    const month = (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
+    const day = (today.getDate() < 10 ? '0' : '') + today.getDate();
+    return `${today.getFullYear()}-${month}-${day}`;
+  }
 
   const getContactNames = () => {
     if (contacts.length === 0) {
@@ -54,7 +57,7 @@ export const AppointmentForm = ({
         <input
           type="date"
           name="date"
-          min={todayString}
+          min={getTodayString()}
           value={date}
           onChange={(e) => setDate(e.target.value)}
           required
