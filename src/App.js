@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { Switch, Route, Redirect, Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
 
-import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
-import { ContactsPage } from "./containers/contactsPage/ContactsPage";
+import { AppointmentsPage } from './containers/appointmentsPage/AppointmentsPage';
+import { ContactsPage } from './containers/contactsPage/ContactsPage';
 
 function App() {
   const [appointments, setAppointments] = useState([]);
   const [contacts, setContacts] = useState([]);
 
   const ROUTES = {
-    CONTACTS: "/contacts",
-    APPOINTMENTS: "/appointments",
+    CONTACTS: '/contacts',
+    APPOINTMENTS: '/appointments'
   };
 
   const addAppointment = (title, contact, date, time) => {
@@ -20,8 +20,8 @@ function App() {
         title: title,
         contact: contact,
         date: date,
-        time: time,
-      },
+        time: time
+      }
     ]);
   };
 
@@ -31,13 +31,13 @@ function App() {
       {
         name: name,
         phone: phone,
-        email: email,
-      },
+        email: email
+      }
     ]);
   };
 
   return (
-    <>
+    <div>
       <nav>
         <Link to={ROUTES.CONTACTS}>Contacts</Link>
         <Link to={ROUTES.APPOINTMENTS}>Appointments</Link>
@@ -57,7 +57,7 @@ function App() {
           />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
 

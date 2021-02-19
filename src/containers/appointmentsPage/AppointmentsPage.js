@@ -1,31 +1,31 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { AppointmentForm } from "../../components/appointmentForm/AppointmentForm";
-import { TileList } from "../../components/tileList/TileList";
+import { AppointmentForm } from '../../components/appointmentForm/AppointmentForm';
+import { TileList } from '../../components/tileList/TileList';
 
 export const AppointmentsPage = ({
   appointments,
   addAppointment,
-  contacts,
+  contacts
 }) => {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('');
   const [contact, setContact] = useState(
-    contacts.length > 0 ? contacts[0].name : ""
+    contacts.length > 0 ? contacts[0].name : ''
   );
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addAppointment(title, contact, date, time);
-    setTitle("");
-    setContact("");
-    setDate("");
-    setTime("");
+    setTitle('');
+    setContact('');
+    setDate('');
+    setTime('');
   };
 
   return (
-    <>
+    <div>
       <h2>Add Appointment</h2>
       <AppointmentForm
         contacts={contacts}
@@ -42,6 +42,6 @@ export const AppointmentsPage = ({
       <br />
       <h2>Appointments</h2>
       <TileList tiles={appointments} />
-    </>
+    </div>
   );
 };

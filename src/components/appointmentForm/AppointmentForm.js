@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { ContactPicker } from "../contactPicker/ContactPicker";
+import { ContactPicker } from '../contactPicker/ContactPicker';
 
 export const AppointmentForm = ({
   contacts,
@@ -12,16 +12,16 @@ export const AppointmentForm = ({
   setDate,
   time,
   setTime,
-  handleSubmit,
+  handleSubmit
 }) => {
   const today = new Date();
-  const month = (today.getMonth() + 1 < 10 ? "0" : "") + (today.getMonth() + 1);
-  const day = (today.getDate() < 10 ? "0" : "") + today.getDate();
+  const month = (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
+  const day = (today.getDate() < 10 ? '0' : '') + today.getDate();
   const todayString = `${today.getFullYear()}-${month}-${day}`;
 
   const getContactNames = () => {
     if (contacts.length === 0) {
-      return ["No Contacts"];
+      return ['No Contacts'];
     }
     return contacts.map((contact) => contact.name);
   };

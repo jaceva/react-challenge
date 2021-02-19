@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-import { ContactForm } from "../../components/contactForm/ContactForm";
-import { TileList } from "../../components/tileList/TileList";
+import { ContactForm } from '../../components/contactForm/ContactForm';
+import { TileList } from '../../components/tileList/TileList';
 
 export const ContactsPage = ({ contacts, addContact }) => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [duplicate, setDuplicate] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!duplicate) {
       addContact(name, phone, email);
-      setName("");
-      setPhone("");
-      setEmail("");
+      setName('');
+      setPhone('');
+      setEmail('');
     }
   };
 
@@ -38,7 +38,7 @@ export const ContactsPage = ({ contacts, addContact }) => {
   return (
     <div>
       <h2>Add Contact</h2>
-      {duplicate ? "Contact Name Already Exists" : ""}
+      {duplicate ? 'Contact Name Already Exists' : ''}
       <ContactForm
         name={name}
         setName={setName}
