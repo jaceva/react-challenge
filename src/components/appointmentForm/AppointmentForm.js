@@ -14,18 +14,15 @@ export const AppointmentForm = ({
   setTime,
   handleSubmit
 }) => {
-
   const getTodayString = () => {
     const today = new Date();
-    const month = (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
+    const month =
+      (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
     const day = (today.getDate() < 10 ? '0' : '') + today.getDate();
     return `${today.getFullYear()}-${month}-${day}`;
-  }
+  };
 
   const getContactNames = () => {
-    if (contacts.length === 0) {
-      return ['No Contacts'];
-    }
     return contacts.map((contact) => contact.name);
   };
 
