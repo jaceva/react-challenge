@@ -18,6 +18,10 @@ export const AppointmentsPage = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     addAppointment(title, contact, date, time);
+    setTitle("");
+    setContact("");
+    setDate("");
+    setTime("");
   };
 
   return (
@@ -25,9 +29,13 @@ export const AppointmentsPage = ({
       <h2>Add Appointment</h2>
       <AppointmentForm
         contacts={contacts}
+        title={title}
         setTitle={setTitle}
+        contact={contact}
         setContact={setContact}
+        date={date}
         setDate={setDate}
+        time={time}
         setTime={setTime}
         handleSubmit={handleSubmit}
       />

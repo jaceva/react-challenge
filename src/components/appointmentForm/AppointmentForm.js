@@ -4,9 +4,13 @@ import { ContactPicker } from "../contactPicker/ContactPicker";
 
 export const AppointmentForm = ({
   contacts,
+  title,
   setTitle,
+  contact,
   setContact,
+  date,
   setDate,
+  time,
   setTime,
   handleSubmit,
 }) => {
@@ -29,6 +33,7 @@ export const AppointmentForm = ({
         <input
           type="text"
           name="title"
+          value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
         />
@@ -38,6 +43,7 @@ export const AppointmentForm = ({
         Appointment With:
         <ContactPicker
           name="contact"
+          value={contact}
           contacts={getContactNames()}
           onChange={(e) => setContact(e.target.value)}
         />
@@ -49,6 +55,7 @@ export const AppointmentForm = ({
           type="date"
           name="date"
           min={todayString}
+          value={date}
           onChange={(e) => setDate(e.target.value)}
           required
         />
@@ -59,6 +66,7 @@ export const AppointmentForm = ({
         <input
           type="time"
           name="time"
+          value={time}
           onChange={(e) => setTime(e.target.value)}
           required
         />

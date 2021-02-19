@@ -11,9 +11,6 @@ export const ContactsPage = ({ contacts, addContact }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    e.target[0].value = "";
-    e.target[1].value = "";
-    e.target[2].value = "";
     if (!duplicate) {
       addContact(name, phone, email);
       setName("");
@@ -43,8 +40,11 @@ export const ContactsPage = ({ contacts, addContact }) => {
       <h2>Add Contact</h2>
       {duplicate ? "Contact Name Already Exists" : ""}
       <ContactForm
+        name={name}
         setName={setName}
+        phone={phone}
         setPhone={setPhone}
+        email={email}
         setEmail={setEmail}
         handleSubmit={handleSubmit}
       />
