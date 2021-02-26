@@ -54,7 +54,7 @@ To maintain state values in the `App` component:
 Based on the given requirements, implement `ContactsPage` as a stateful component to handle the logic for adding new contacts and listing current contacts.
 
 This component will:
-- Have two props: 
+- Receive two props: 
   - The current list of contacts
   - A callback function for adding a new contact
 - Render a `ContactForm` and a `TileList`.
@@ -78,7 +78,7 @@ This component will:
 Based on the given requirements, implement `ContactForm` as a stateless component that renders a web form to collect the necessary contact information.
 
 This component will:
-- Have 7 props: 
+- Receive 7 props: 
   - The variables for contact name, phone and email 
   - The setters for contact name, phone and email 
   - The `handleSubmit` callback function that handles the form submission
@@ -103,7 +103,7 @@ Based on the given requirements, implement `TileList` as a stateless component t
 
 This component will:
 
-- Have one prop:
+- Receive one prop:
   - An array to render as a list
 - Use the array passed via props to iteratively render `Tile` components, passing each object in the array as a prop to each rendered `Tile` component.
 
@@ -120,7 +120,7 @@ This component will:
 Based on the given requirements, implement `Tile` as a stateless component that renders the data from an object.
 
 This component will:
-- Have one prop: 
+- Receive one prop: 
   - An object
 - Iterate over the values in the object, passed in via props, and render a `<p>` element for each value.
 
@@ -135,7 +135,7 @@ This component will:
 Based on the given requirements, implement `AppointmentsPage` as a stateful component that handles the logic for adding new appointments and listing current appointments.
 
 This component will:
-- Have three props:
+- Receive three props:
   - The current list of appointments
   - The current list of contacts
   - A callback function for adding a new appointment.
@@ -157,7 +157,7 @@ This component will:
 Based on the given requirements, implement `AppointmentForm` as a stateless component that renders a web form to collect the necessary appointment information.
 
 This component will:
-- Have 9 props:
+- Receive 9 props:
   - The variables for appointment title, contact, date and time
   - The setter functions for appointment title, contact, date and time
   - The `handleSubmit` callback function that handles the form submission
@@ -182,7 +182,7 @@ This component will:
 Based on the given requirements, implement `ContactPicker` as a stateless component that renders a drop down list of all contact names.
 
 This component will:
-- Have 2 props:
+- Receive 2 props:
   - The array of contacts
   - A callback function to handle when the `onChange` event is triggered
 - Render a `select` element with the `onChange` attribute set to the callback passed in via props.
