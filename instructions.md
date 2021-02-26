@@ -28,6 +28,8 @@ The application code starts with **App.js**, **ContactsPage.js** and **Appointme
 
 `App` is a stateful component that handles the routing between the two pages, `ContactsPage` and `AppointmentsPage`. This is already implemented using [React Router](https://reactrouter.com/web/guides/quick-start).
 
+> Note: You do not need to be familiar with React Router to complete this project.
+
 Based on the given requirements, implement `App` as a stateful component to handle the logic for the contacts and appointments data.
 
 This component will:
