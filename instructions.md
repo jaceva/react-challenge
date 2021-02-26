@@ -177,7 +177,7 @@ This component will:
 
 - Import the `ContactPicker` component
 - Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
-- The children of the form should be `<input>`s of `type` text, date, time and submit
+- The children of the form should be `<input>` elements of `type` text, date, time and submit
 - The `value` attribute of the input fields should be set to the associated variable in `props`
 - The `onChange` attribute for each of the `<input>` elements and the `ContactPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
 
