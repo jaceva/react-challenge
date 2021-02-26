@@ -160,7 +160,7 @@ This component will:
 - Have 9 props:
   - The variables for appointment title, contact, date and time
   - The setter functions for appointment title, contact, date and time
-  - The function that handles the form submission.
+  - The `handleSubmit` callback function that handles the form submission
 - Render a `form` with:
   - The `onSubmit` attribute set
   - 3 controlled `input` components, one for each piece of appointment data
