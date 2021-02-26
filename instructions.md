@@ -56,7 +56,7 @@ Based on the given requirements, implement `ContactsPage` as a stateful componen
 This component will:
 - Have two props: 
   - The current list of contacts
-  - A function for adding a new contact
+  - A callback function for adding a new contact
 - Render a `ContactForm` and a `TileList`.
 - Keep track of the current name, phone, and email entered into the form.
 - Check for duplicates whenever the name in the form changes and indicate the name is a duplicate.
