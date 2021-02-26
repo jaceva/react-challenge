@@ -150,7 +150,7 @@ This component will:
 - Import `AppointmentForm` and `TileList`
 - Make `props` a function parameter
 - The four state variables holding the form's appointment data  should each default to an empty string using `useState('')`
-- The handle submit function should add contact function and set the contact info state variable to `''` 
+- The `handleSubmit()` function should call the callback function for adding a new appointment with the data from the form. It should also reset the appointment info state variables to their default values.
 
 ### Task #8
 
