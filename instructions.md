@@ -193,7 +193,6 @@ This component will:
 ### Hint
 
 - Make `props` a function parameter
-- Use `<select>` with the `onChange` attribute set to the handler in `props`
 - The default `<option>` should have `key` and `value` attributes
 - The default `<option>` should have `selected="selected"` attribute
 - Use `map()` on the contact array in `props` to render an `<option>` for each contact with `key` and `value` attributes set to the contact name
