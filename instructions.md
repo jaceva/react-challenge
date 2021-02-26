@@ -162,7 +162,7 @@ This component will:
   - The setter functions for appointment title, contact, date and time
   - The `handleSubmit` callback function that handles the form submission
 - Render a `form` with:
-  - The `onSubmit` attribute set
+  - The `onSubmit` attribute set to the callback function passed in via `props`
   - 3 controlled `input` components, one for each piece of appointment data
   - a `ContactPicker` component with the contacts list as its props.
   - A submit button
