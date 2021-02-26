@@ -68,7 +68,7 @@ This component will:
 - Add `{ useState, useEffect }` to the `'react'` import statement
 - Import `ContactForm` and `TileList`
 - Make `props` a function parameter
-- The contact info state variables should default to an empty string using `useState('')`
+- The three state variables holding the form's contact data should each default to an empty string using `useState('')`
 - The state variable to track a duplicate name should be set to false using `useState(false)`
 - Implement a call to `useEffect`, where the callback function sets the duplicate state variable to `true` if the name state variable is already in the contacts list
 - An `if` statement should be added to `handleSubmit` that checks the duplicate state variable is `false`. The body of the `if` statement should call the add contact function in `props` and set the contact info state variables to `''` 
