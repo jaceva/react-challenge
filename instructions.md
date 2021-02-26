@@ -91,7 +91,7 @@ This component will:
 ### Hint
 
 - Make `props` a function parameter
-- Use `<form onSubmit={props.handlerFunction} >` to create the html form
+- Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>`s of `type` `text`, `tel`, `email` and `submit`
 - The `value` attribute of the 3 controlled `input`s should be set to the associated variable in `props`
 - The `onChange` attributes of the 3 controlled `input`s should be set to a callback function that passes `e.target.value` to the the associated setter function
