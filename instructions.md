@@ -149,7 +149,7 @@ This component will:
 - Add `{ useState }` to the `'react'` import statement
 - Import `AppointmentForm` and `TileList`
 - Make `props` a function parameter
-- The appointment info state variables should default to an empty string using `useState('')`
+- The four state variables holding the form's appointment data  should each default to an empty string using `useState('')`
 - The handle submit function should add contact function and set the contact info state variable to `''` 
 
 ### Task #8
