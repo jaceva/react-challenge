@@ -138,7 +138,7 @@ This component will:
 - Have three props:
   - The current list of appointments
   - The current list of contacts
-  - A function for adding a new appointment.
+  - A callback function for adding a new appointment.
 - Render an `AppointmentForm` and a `TileList`.
 - Keep track of the current title, contact, date and time entered into the form.
 - Add a new appointment on form submission.
