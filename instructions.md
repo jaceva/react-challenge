@@ -176,7 +176,7 @@ This component will:
 - Use `<form onSubmit={props.handler} >` for the form
 - The children of the form should be `<input>`s of `type` text, date, time and submit
 - The `value` attribute of the input fields should be set to the associated variable in `props`
-- The `onChange` attributes of the input fields should be set to a callback function that passes `e.target.value` to the the associated setter function
+- The `onChange` attribute for each of the `<input>` elements and the `ContacgtPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
 
 ### Task #9
 
