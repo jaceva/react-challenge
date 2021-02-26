@@ -188,7 +188,7 @@ This component will:
   - A function to handle `onChange`.
 - Render a `select` element with the `onChange` attribute set to the callback passed in via props.
 - Have a default first `option` element that indicates no contact is selected.
-- Iteratively add `option` elements using the contacts array.
+- Iteratively add `option` elements using the values from the contacts array passed in via props.
 
 ### Hint
 
