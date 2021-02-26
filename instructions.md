@@ -166,7 +166,7 @@ This component will:
   - 3 controlled `input` components, one for each piece of appointment data
   - a `ContactPicker` component with the contacts list passed in via props.
   - A submit button
-- Use `getTodayString()` to set the minimum date of the data `input`.
+- Use `getTodayString()` to set the `min` attribute of the date `input`.
 
 ### Hint
 
