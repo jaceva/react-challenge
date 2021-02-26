@@ -123,7 +123,7 @@ Based on the given requirements, implement `Tile` as a stateless component that 
 This component will:
 - Have one prop: 
   - An object
-- Use the `Object.values()` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) to iteratively render the data in the object.
+- Iterate over the values in the object, passed in via props, and render a `<p>` element for each value.
 
 ### Hint
 
