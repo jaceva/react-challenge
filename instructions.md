@@ -112,7 +112,7 @@ This component will:
 - Import the `Tile` component
 - Make `props` a function parameter
 - Use the `map()` method on the array prop
-- The `map()` callback function has a data object and an index as parameters
+- The `map()` callback function should have an object from the array as the first parameter and that object's index as the second parameter
 - The callback should return a `Tile` component with the data object added to `props` and set the component `key` to the index 
 
 ### Task #6 
