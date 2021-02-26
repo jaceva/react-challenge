@@ -43,7 +43,7 @@ Define a callback function that, given a title, contact, date, and time, adds a 
 To maintain state values in the `App` component:
 - Add `{ useState }` to the `'react'` import statement
 - Create empty arrays for contacts and appointments using `useState([])`
-- Set the new state with the setter function using the spread operator.
+- In the callback functions, set the new state with the setter function using the spread operator
 ```js
 [...oldStateArray, newArrayObject]
 ```
