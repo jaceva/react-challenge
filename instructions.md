@@ -30,7 +30,7 @@ The application code starts with **App.js**, **ContactsPage.js** and **Appointme
 
 > Note: You do not need to be familiar with React Router to complete this project.
 
-Based on the given requirements, implement `App` as a stateful component to handle the logic for the contacts and appointments data.
+Based on the given requirements, implement `App` as a stateful component that maintains appointments and contacts. It should also pass those values, along with callback functions to update those state values, to its child components.
 
 This component will:
 - Keep track of the contacts and appointments data, each being an array of objects.
