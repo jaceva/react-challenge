@@ -128,7 +128,7 @@ This component will:
 
 - Make `props` a function parameter
 - You may use the `Object.values()` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) to generate an array of the object's values and then use `map()` to iterate over the array.
-- Use the `map()` callback to render each value in the array on a separate line
+- Use the `map()` callback to render a `<p>` element for each of the object's values. If you used `Object.values()`, use the value's index as the `key` for the `<p>` element.
 
 ### Task #7
 
