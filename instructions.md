@@ -70,7 +70,7 @@ This component will:
 - Make `props` a function parameter
 - The three state variables holding the form's contact data should each default to an empty string using `useState('')`
 - Use a fourth local state variable to track a duplicate name. It should be `false` by default using `useState(false)`
-- Implement a call to `useEffect`, where the callback function sets the duplicate state variable to `true` if the name state variable is already in the contacts list
+- To check for duplicates, implement a call to `useEffect` that sets the duplicate state variable to `true` if the name state variable is already in the contacts list
 - An `if` statement should be added to `handleSubmit` that checks the duplicate state variable is `false`. The body of the `if` statement should call the add contact function in `props` and set the contact info state variables to `''` 
 
 ### Task #4 
