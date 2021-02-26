@@ -15,12 +15,11 @@ If you choose to do this project on your computer instead of Codecademy, you can
 ### Task #1 
 To complete this project, you should have completed the Codecademy lessons from [Learn React](https://www.codecademy.com/learn/react-101) including:
 - JSX
-- Functional Components
-- React Hooks
-- Stateless vs. Stateful Components
-- State sharing with parent, child and sibling components
-- Container vs Presentational Components
-- React Forms  
+- React Components
+- Components Interacting
+- Stateless Components From Stateful Components
+- Advanced React
+- Hooks
 
 ## Task Group #2 Project Requirements
 
