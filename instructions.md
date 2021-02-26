@@ -59,17 +59,21 @@ This component will:
 - Receive two props: 
   - The current list of contacts
   - A callback function for adding a new contact
-- Render a `ContactForm` and a `TileList`.
 - Keep track of three local state values: the current name, phone, and email entered into the form.
 - Check for duplicates whenever the name in the form changes and indicate the name is a duplicate.
-- Only add a new contact on form submission if it does not duplicate an existing contact's name.
+- Inside the `handleSubmit()` function only add a new contact on form submission if it does not duplicate an existing contact's name.
 - A successful submission should clear the form.
+- Render a `ContactForm` with the following passed via `props`:
+  - local state variables
+  - local state variable setter functions
+  - `handleSubmit` callback function
+- Render a `TileList` with the contact array passed via `props`.
 
 ### Hint
 
 - Add `{ useState, useEffect }` to the `'react'` import statement
 - Import `ContactForm` and `TileList`
-- Make `props` a function parameter
+- Extract the array of contacts and the callback for adding contacts from the `props` value passed as an argument to `ContactsPage`
 - The three state variables holding the form's contact data should each default to an empty string using `useState('')`
 - Use a fourth local state variable to track a duplicate name. It should be `false` by default using `useState(false)`
 - To check for duplicates, implement a call to `useEffect` that sets the duplicate state variable to `true` if the name state variable is already in the contacts list
@@ -80,10 +84,6 @@ This component will:
 Based on the given requirements, implement `ContactForm` as a stateless component that renders a web form to collect the necessary contact information.
 
 This component will:
-- Receive 7 props: 
-  - The variables for contact name, phone and email 
-  - The setters for contact name, phone and email 
-  - The `handleSubmit` callback function that handles the form submission
 - Render a `form` with:
   - The `onSubmit` attribute set
   - 3 controlled `input` components, one for each piece of contact data
@@ -92,7 +92,6 @@ This component will:
 
 ### Hint
 
-- Make `props` a function parameter
 - Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>` elements, each with one of the following `type` attributes: `'text'`, `'tel'`, `'email'` and `'submit'`
 - The `value` attribute of the 3 controlled `input`s should be set to the associated variable passed via `props`
@@ -114,7 +113,7 @@ The requirements for the `TileList` component are generalized and allow it to be
 ### Hint
 
 - Import the `Tile` component
-- Make `props` a function parameter
+- Extract the array of data from the `props` value passed as an argument to `TileList`
 - Use the `map()` method on the array prop
 - The `map()` callback function should have an object from the array as the first parameter and that object's index as the second parameter
 - The callback should return a `Tile` component with the object parameter passed as a prop and the index parameter used as the component's `key`.
@@ -132,7 +131,7 @@ Just like the `TileList` component, the `Tile` component is generalized to work 
 
 ### Hint
 
-- Make `props` a function parameter
+- Extract the data object from the `props` value passed as an argument to `Tile`
 - You may use the `Object.values()` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) to generate an array of the object's values and then use `map()` to iterate over the array.
 - Use the `map()` callback to render a `<p>` element for each of the object's values. If you used `Object.values()`, use the value's index as the `key` for the `<p>` element.
 
@@ -147,14 +146,19 @@ This component will:
   - A callback function for adding a new appointment.
 - Render an `AppointmentForm` and a `TileList`.
 - Keep track of the current title, contact, date and time entered into the form.
-- Add a new appointment on form submission.
+- Inside the `handleSubmit()` function add a new appointment on form submission.
 - Clear the form on submission. 
+- Render a `AppointmentForm` with the following passed via `props`:
+  - local state variables
+  - local state variable setter functions
+  - `handleSubmit` callback function
+- Render a `TileList` with the appointment array passed via `props`.
 
 ### Hint
 
 - Add `{ useState }` to the `'react'` import statement
 - Import `AppointmentForm` and `TileList`
-- Make `props` a function parameter
+- Extract the array of appointments and the callback for adding appointments from the `props` value passed as an argument to `AppointmentsPage`
 - The four state variables holding the form's appointment data  should each default to an empty string using `useState('')`
 - The `handleSubmit()` function should call the callback function for adding a new appointment with the data from the form. It should also reset the appointment info state variables to their default values.
 
@@ -163,10 +167,6 @@ This component will:
 Based on the given requirements, implement `AppointmentForm` as a stateless component that renders a web form to collect the necessary appointment information.
 
 This component will:
-- Receive 9 props:
-  - The variables for appointment title, contact, date and time
-  - The setter functions for appointment title, contact, date and time
-  - The `handleSubmit` callback function that handles the form submission
 - Render a `form` with:
   - The `onSubmit` attribute set to the callback function passed in via `props`
   - 3 controlled `input` components, one for each piece of appointment data
@@ -177,11 +177,10 @@ This component will:
 ### Hint
 
 - Import the `ContactPicker` component
-- Make `props` a function parameter
 - Use `<form onSubmit={props.handler} >` for the form
 - The children of the form should be `<input>`s of `type` text, date, time and submit
 - The `value` attribute of the input fields should be set to the associated variable in `props`
-- The `onChange` attribute for each of the `<input>` elements and the `ContacgtPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
+- The `onChange` attribute for each of the `<input>` elements and the `ContactPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
 
 ### Task #9
 
@@ -197,7 +196,7 @@ This component will:
 
 ### Hint
 
-- Make `props` a function parameter
+- Extract the array of contacts and the callback for handling `onChange` events from the `props` value passed as an argument to `ContactPicker`
 - The default `<option>` should have `key` and `value` attributes
 - The default `<option>` should have `selected="selected"` attribute
 - Use `map()` on the contact array in `props` to render an `<option>` for each contact with `key` and `value` attributes set to the contact name

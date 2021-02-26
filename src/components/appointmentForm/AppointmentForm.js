@@ -1,6 +1,17 @@
 import React from 'react';
 
-export const AppointmentForm = () => {
+export const AppointmentForm = ({
+  contacts,
+  title,
+  setTitle,
+  contact,
+  setContact,
+  date,
+  setDate,
+  time,
+  setTime,
+  handleSubmit
+}) => {
   const getTodayString = () => {
     const today = new Date();
     const month =
