@@ -40,7 +40,7 @@ Define a callback function that, given a title, contact, date, and time, adds a 
 - Pass the appointments array, contacts array, and the add appointment function as props to the `AppointmentsPage` component.
 
 ### Hint
-
+To maintain state values in the `App` component:
 - Add `{ useState }` to the `'react'` import statement
 - Create empty arrays for contacts and appointments using `useState([])`
 - Set the new state with the setter function using the spread operator.
