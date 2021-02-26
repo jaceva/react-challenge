@@ -9,7 +9,7 @@ In this project you will use functional React components to create an app that m
 You will work with stateful and stateless functional React components using hooks. The following task descriptions will walk through implementing the app from the top most component down. If you would like to implement it in a different order feel free to do what is comfortable for you.
 
 ## Setup Instructions
-If you choose to do this project on your computer instead of Codecademy, you can download what you'll need by clicking the "Download" button below. Inside the top directory run `npm install` and then `npm start` to run the app in your browser.
+If you choose to do this project on your computer instead of Codecademy, you can download what you'll need by clicking the "Download" button below. Make sure you have [Node installed on your computer](https://www.codecademy.com/articles/setting-up-node-locally) and then, inside the project's root directory, run `npm install`. Finally, run `npm start` which will automatically open up a new tab in your browser with your running application. If a new tab does not appear, you can visit [http://localhost:3000/](http://localhost:3000/).
 
 ## Task Group #1 Prerequisites
 ### Task #1 
