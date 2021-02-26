@@ -81,7 +81,7 @@ This component will:
 - Have 7 props: 
   - The variables for contact name, phone and email 
   - The setters for contact name, phone and email 
-  - The function that handles the form submission
+  - The `handleSubmit` callback function that handles the form submission
 - Render a `form` with:
   - The `onSubmit` attribute set
   - 3 controlled `input` components, one for each piece of contact data
