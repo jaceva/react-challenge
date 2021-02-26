@@ -101,13 +101,15 @@ This component will:
 
 ### Task #5 
 
-Based on the given requirements, implement `TileList` as a stateless component that renders a list of `Tile` components using an array of objects.
+Based on the given requirements, implement `TileList` as a stateless component that renders a list of `Tile` components using an array of objects. 
 
 This component will:
 
 - Receive one prop:
   - An array to render as a list
 - Use the array passed via props to iteratively render `Tile` components, passing each object in the array as a prop to each rendered `Tile` component.
+
+The requirements for the `TileList` component are generalized and allow it to be shared by the `ContactsPage` and `AppointmentsPage` components. As long as an array of objects with either the contact data or appointments data is passed then the appropriate content will render.
 
 ### Hint
 
@@ -125,6 +127,8 @@ This component will:
 - Receive one prop: 
   - An object
 - Iterate over the values in the object, passed in via props, and render a `<p>` element for each value.
+
+Just like the `TileList` component, the `Tile` component is generalized to work with data from any object. This allows it to be used in both the `ContactsPage` and `AppointmentsPage` components.
 
 ### Hint
 
