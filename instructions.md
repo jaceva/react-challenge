@@ -105,8 +105,7 @@ This component will:
 
 - Have one prop:
   - An array to render as a list
-- Use the array in props to iteratively render `Tile` components.
-- Add the objects in the array to the props of the `Tile` component.
+- Use the array passed via props to iteratively render `Tile` components, passing each object in the array as a prop to each rendered `Tile` component.
 
 ### Hint
 
