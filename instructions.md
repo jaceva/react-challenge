@@ -127,7 +127,7 @@ This component will:
 ### Hint
 
 - Make `props` a function parameter
-- `map()` over the array of values from the object in `props` using `Object.values()`
+- You may use the `Object.values()` [method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) to generate an array of the object's values and then use `map()` to iterate over the array.
 - Use the `map()` callback to render each value in the array on a separate line
 
 ### Task #7
