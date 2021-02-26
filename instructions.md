@@ -37,7 +37,7 @@ Based on the given requirements, implement `App` as a stateful component that ma
 In this component:
 - Keep track of the contacts and appointments data, each being an array of objects.
 - Define a callback function that, given a name, phone number, and email, adds a new contact object with that data to the array of contacts. 
-Define a callback function that, given a title, contact, date, and time, adds a new appointment object with that data to the array of appointments. 
+- Define a callback function that, given a title, contact, date, and time, adds a new appointment object with that data to the array of appointments. 
 - Pass the array of contacts and the appropriate callback function as props to the `ContactsPage` component.
 - Pass the appointments array, contacts array, and the add appointment function as props to the `AppointmentsPage` component.
 
@@ -61,7 +61,7 @@ This component will:
   - A callback function for adding a new contact
 - Keep track of three local state values: the current name, phone, and email entered into the form.
 - Check for duplicates whenever the name in the form changes and indicate the name is a duplicate.
-- Inside the `handleSubmit()` function only add a new contact on form submission if it does not duplicate an existing contact's name.
+- Only add a new contact on form submission if it does not duplicate an existing contact's name.
 - A successful submission should clear the form.
 - Render a `ContactForm` with the following passed via `props`:
   - local state variables
@@ -95,7 +95,7 @@ This component will:
 - Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>` elements, each with one of the following `type` attributes: `'text'`, `'tel'`, `'email'` and `'submit'`
 - The `value` attribute of the 3 controlled `input`s should be set to the associated variable passed via `props`
-- The `onChange` attributes of the 3 controlled `input`s should be set to a callback function that passes `e.target.value` to the associated setter function from `props`
+- The `onChange` attributes of the 3 controlled `input` elements should be set to a callback function that passes `e.target.value` to the associated setter function from `props`
 - One example of a phone regex is the US locale: `"[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"`
 
 ### Task #5 
@@ -106,9 +106,9 @@ This component will:
 
 - Receive one prop:
   - An array to render as a list
-- Use the array passed via props to iteratively render `Tile` components, passing each object in the array as a prop to each rendered `Tile` component.
+- Use the array passed via `props` to iteratively render `Tile` components, passing each object in the array as a prop to each rendered `Tile` component.
 
-The requirements for the `TileList` component are generalized and allow it to be shared by the `ContactsPage` and `AppointmentsPage` components. As long as an array of objects with either the contact data or appointments data is passed then the appropriate content will render.
+The requirements for the `TileList` component are generalized and allow it to be shared by the `ContactsPage` and `AppointmentsPage` components. As long as an array of objects with either the contact data or appointments data is passed then the content will be handled appropriately.
 
 ### Hint
 
@@ -144,9 +144,8 @@ This component will:
   - The current list of appointments
   - The current list of contacts
   - A callback function for adding a new appointment.
-- Render an `AppointmentForm` and a `TileList`.
 - Keep track of the current title, contact, date and time entered into the form.
-- Inside the `handleSubmit()` function add a new appointment on form submission.
+- Add a new appointment on form submission.
 - Clear the form on submission. 
 - Render a `AppointmentForm` with the following passed via `props`:
   - local state variables
@@ -169,15 +168,15 @@ Based on the given requirements, implement `AppointmentForm` as a stateless comp
 This component will:
 - Render a `form` with:
   - The `onSubmit` attribute set to the callback function passed in via `props`
-  - 3 controlled `input` components, one for each piece of appointment data
-  - a `ContactPicker` component with the contacts list passed in via props.
+  - 3 controlled `input` components, to be used for the title, date and time appointment data
+  - A `ContactPicker` component with the contacts list passed in via props
   - A submit button
 - Use `getTodayString()` to set the `min` attribute of the date `input`.
 
 ### Hint
 
 - Import the `ContactPicker` component
-- Use `<form onSubmit={props.handler} >` for the form
+- Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>`s of `type` text, date, time and submit
 - The `value` attribute of the input fields should be set to the associated variable in `props`
 - The `onChange` attribute for each of the `<input>` elements and the `ContactPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
