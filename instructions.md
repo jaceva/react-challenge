@@ -32,7 +32,7 @@ The application code starts with **App.js**, **ContactsPage.js** and **Appointme
 
 Based on the given requirements, implement `App` as a stateful component that maintains appointments and contacts. It should also pass those values, along with callback functions to update those state values, to its child components.
 
-This component will:
+In this component:
 - Keep track of the contacts and appointments data, each being an array of objects.
 - Define a callback function that, given a name, phone number, and email, adds a new contact object with that data to the array of contacts. 
 - Define a function to add data to the appointments array.
