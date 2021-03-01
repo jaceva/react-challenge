@@ -13,11 +13,8 @@ export const AppointmentForm = ({
   handleSubmit
 }) => {
   const getTodayString = () => {
-    const today = new Date();
-    const month =
-      (today.getMonth() + 1 < 10 ? '0' : '') + (today.getMonth() + 1);
-    const day = (today.getDate() < 10 ? '0' : '') + today.getDate();
-    return `${today.getFullYear()}-${month}-${day}`;
+    const [month, day, year] = new Date().toLocaleDateString('en-US').split('/');
+    return `${year}-${month.padStart(2, '0')}-${day.padStart(2,'0')}`;
   };
 
   return (
