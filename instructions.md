@@ -86,9 +86,9 @@ Based on the given requirements, implement `ContactForm` as a stateless componen
 This component will:
 - Render a `form` with:
   - The `onSubmit` attribute set
-  - 3 controlled `input` components, one for each piece of contact data
+  - 3 controlled `<input>` elements, one for each piece of contact data
   - A submit button
-- Include a `pattern` attribute to the phone `input` with [a regex](https://regexlib.com/Search.aspx?k=phone&c=-1&m=-1&ps=20) that matches the phone locale of your preference.
+- Include a `pattern` attribute to the phone `<input>` with [a regex](https://regexlib.com/Search.aspx?k=phone&c=-1&m=-1&ps=20) that matches the phone locale of your preference.
 
 ### Hint
 
@@ -168,17 +168,17 @@ Based on the given requirements, implement `AppointmentForm` as a stateless comp
 This component will:
 - Render a `form` with:
   - The `onSubmit` attribute set to the callback function passed in via `props`
-  - 3 controlled `input` components, to be used for the title, date and time appointment data
+  - 3 controlled `<input>` elements, to be used for the title, date and time appointment data
   - A `ContactPicker` component with the contacts list passed in via props
   - A submit button
-- Use `getTodayString()` to set the `min` attribute of the date `input`.
+- Use `getTodayString()` to set the `min` attribute of the date `<input>`.
 
 ### Hint
 
 - Import the `ContactPicker` component
 - Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>` elements of `type` text, date, time and submit
-- The `value` attribute of the input fields should be set to the associated variable in `props`
+- The `value` attribute of the `<input>` fields should be set to the associated variable in `props`
 - The `onChange` attribute for each of the `<input>` elements and the `ContactPicker` should be set to a callback function that passes `e.target.value` to the associated setter function
 
 ### Task #9
