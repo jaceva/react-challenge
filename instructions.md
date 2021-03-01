@@ -94,8 +94,8 @@ This component will:
 
 - Use `<form onSubmit={callback} >` to create the html form, where `callback` is the function passed via `props` for handling the form submission
 - The children of the form should be `<input>` elements, each with one of the following `type` attributes: `'text'`, `'tel'`, `'email'` and `'submit'`
-- The `value` attribute of the 3 controlled `input` elements should be set to the associated variable passed via `props`
-- The `onChange` attributes of the 3 controlled `input` elements should be set to a callback function that passes `e.target.value` to the associated setter function from `props`
+- The `value` attribute of the 3 controlled `<input>` elements should be set to the associated variable passed via `props`
+- The `onChange` attributes of the 3 controlled `<input>` elements should be set to a callback function that passes `e.target.value` to the associated setter function from `props`
 - One example of a phone regex is the US locale: `"[1-9][0-9]{2}-[1-9][0-9]{2}-[0-9]{4}"`
 
 ### Task #5 
