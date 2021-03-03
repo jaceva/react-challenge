@@ -12,7 +12,7 @@ export const AppointmentForm = ({
   setDate,
   time,
   setTime,
-  handleSubmit,
+  handleSubmit
 }) => {
   const getTodayString = () => {
     const [month, day, year] = new Date()
