@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import { ContactPicker } from '../contactPicker/ContactPicker';
+import { ContactPicker } from "../contactPicker/ContactPicker";
 
 export const AppointmentForm = ({
   contacts,
@@ -12,11 +12,13 @@ export const AppointmentForm = ({
   setDate,
   time,
   setTime,
-  handleSubmit
+  handleSubmit,
 }) => {
   const getTodayString = () => {
-    const [month, day, year] = new Date().toLocaleDateString('en-US').split('/');
-    return `${year}-${month.padStart(2, '0')}-${day.padStart(2,'0')}`;
+    const [month, day, year] = new Date()
+      .toLocaleDateString("en-US")
+      .split("/");
+    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
   const getContactNames = () => {
@@ -26,28 +28,27 @@ export const AppointmentForm = ({
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Appointment Title:
         <input
           type="text"
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
+          placeholder="Appointment Title"
         />
       </label>
       <br />
       <label>
-        Appointment With:
         <ContactPicker
           name="contact"
           value={contact}
           contacts={getContactNames()}
           onChange={(e) => setContact(e.target.value)}
+          placeholder="Appointment With"
         />
       </label>
       <br />
       <label>
-        Appointment Date:
         <input
           type="date"
           name="date"
@@ -59,7 +60,6 @@ export const AppointmentForm = ({
       </label>
       <br />
       <label>
-        Appointment Time:
         <input
           type="time"
           name="time"
